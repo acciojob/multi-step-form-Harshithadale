@@ -55,7 +55,8 @@ function Step({ ind, setInd }) {
           <input id="card_info" type="number" />
           <br />
           <label>Expiry Date:</label>
-          <input type="date" id="expiry_date" />
+          <input type="text" placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}" id="expiry_date"/>
+
           <br />
           <button onClick={handlePrev} type="button">Previous</button>
           <button onClick={handleSubmit} type='submit'>Submit</button>
