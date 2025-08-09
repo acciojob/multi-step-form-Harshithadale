@@ -13,7 +13,7 @@ function Step({ind,setInd}) {
                     <label>Last Name</label>
                     <input type="text" id="last_name"/>
                     <br/>
-                    <button onClick={()=>setInd(prev=>prev+1)}>Next</button>
+                    <button type="button" onClick={()=>setInd(prev=>prev+1)}>Next</button>
                 </div>
             ):""
         }
@@ -26,8 +26,8 @@ function Step({ind,setInd}) {
                 <label>Model:</label>
                 <input id="model"/>
                 <br/>
-                <button onClick={()=>setInd(prev=>prev-1)}>Previous</button>
-                <button onClick={()=>setInd(prev=>prev+1)}>Next</button>
+                <button type="button" onClick={()=>setInd(prev=>prev-1)}>Previous</button>
+                <button type="button" onClick={()=>setInd(prev=>prev+1)}>Next</button>
             </div>):""
         }
         {
@@ -39,8 +39,8 @@ function Step({ind,setInd}) {
                 <label>Expiry Date:</label>
                 <input type='date' id="expiry_date"/>
                 <br/>
-                <button onClick={()=>setInd(prev=>prev+1)}>Previous</button>
-                <button onClick={()=>setInd(prev=>1)}>Submit</button>
+                <button type="button" onClick={()=>setInd(prev=>prev+1)}>Previous</button>
+                <button type="button" onClick={()=>setInd(prev=>1)}>Submit</button>
             </div>):""
         }
     </form>
