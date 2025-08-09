@@ -28,7 +28,7 @@ function Step({ ind, setInd }) {
           <label>Last Name</label>
           <input type="text" id="last_name" />
           <br />
-          <button onClick={handleNext}>Next</button>
+          <button onClick={handleNext} type="button">Next</button>
           </>
       )}
       </div>
@@ -42,8 +42,8 @@ function Step({ ind, setInd }) {
           <label>Price:</label>
           <input id="car_price" />
           <br />
-          <button onClick={handlePrev}>Previous</button>
-          <button onClick={handleNext}>Next</button>
+          <button onClick={handlePrev} type="button">Previous</button>
+          <button onClick={handleNext} type="button">Next</button>
           </>
       )}
        </div>
@@ -57,8 +57,8 @@ function Step({ ind, setInd }) {
           <label>Expiry Date:</label>
           <input type="date" id="expiry_date" />
           <br />
-          <button onClick={handlePrev}>Previous</button>
-          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handlePrev} type="button">Previous</button>
+          <button onClick={handleSubmit} type='submit'>Submit</button>
           </>
         
       )}
