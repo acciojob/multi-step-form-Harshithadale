@@ -18,8 +18,9 @@ function Step({ ind, setInd }) {
 
   return (
     <form>
-      {ind === 1 && (
         <div id="step1">
+      {ind === 1 && (
+        <>
           <h1>Customer Details</h1>
           <label>First Name</label>
           <input type="text" id="first_name" />
@@ -28,11 +29,12 @@ function Step({ ind, setInd }) {
           <input type="text" id="last_name" />
           <br />
           <button onClick={handleNext}>Next</button>
-        </div>
+          </>
       )}
-
+      </div>
+      <div id="step2">
       {ind === 2 && (
-        <div id="step2">
+        <>
           <h1>Car Details</h1>
           <label>Model:</label>
           <input id="model" />
@@ -42,11 +44,12 @@ function Step({ ind, setInd }) {
           <br />
           <button onClick={handlePrev}>Previous</button>
           <button onClick={handleNext}>Next</button>
-        </div>
+          </>
       )}
-
+       </div>
+      <div id="step3">
       {ind === 3 && (
-        <div id="step3">
+<>
           <h1>Payment Details</h1>
           <label>Credit Card Number:</label>
           <input id="card_info" type="number" />
@@ -56,8 +59,10 @@ function Step({ ind, setInd }) {
           <br />
           <button onClick={handlePrev}>Previous</button>
           <button onClick={handleSubmit}>Submit</button>
-        </div>
+          </>
+        
       )}
+      </div>
     </form>
   );
 }
