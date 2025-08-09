@@ -4,8 +4,8 @@ function Step({ind,setInd}) {
   return (
     <form>
         {
-            ind === 1 ? (<div>
-                <>
+            ind === 1 ? (
+                <div id="step1">
                     <h1>Customer Details</h1>
                     <label>First Name</label>
                     <input type="text" id="first_name"/>
@@ -14,11 +14,11 @@ function Step({ind,setInd}) {
                     <input type="text" id="last_name"/>
                     <br/>
                     <button onClick={()=>setInd(prev=>prev+1)}>Next</button>
-                </>
-            </div>):""
+                </div>
+            ):""
         }
         {
-            ind == 2 ? (<div>
+            ind == 2 ? (<div id="step2">
                 <h1>Car Details</h1>
                 <label>Price:</label>
                 <input id="car_price"/>
@@ -31,7 +31,7 @@ function Step({ind,setInd}) {
             </div>):""
         }
         {
-            ind === 3 ? (<div>
+            ind === 3 ? (<div id="step3">
                 <h1>Payment Details</h1>
                 <label>Credit card Number:</label>
                 <input id="card_info" type="number"/>
