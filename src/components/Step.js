@@ -1,6 +1,21 @@
 import React from 'react';
 
 function Step({ ind, setInd }) {
+  const handleNext = (e) => {
+    e.preventDefault();
+    setInd(prev => prev + 1);
+  };
+
+  const handlePrev = (e) => {
+    e.preventDefault();
+    setInd(prev => prev - 1);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setInd(1);
+  };
+
   return (
     <form>
       {ind === 1 && (
@@ -12,9 +27,7 @@ function Step({ ind, setInd }) {
           <label>Last Name</label>
           <input type="text" id="last_name" />
           <br />
-          <button type="button" onClick={() => setInd(prev => prev + 1)}>
-            Next
-          </button>
+          <button onClick={handleNext}>Next</button>
         </div>
       )}
 
@@ -27,12 +40,8 @@ function Step({ ind, setInd }) {
           <label>Price:</label>
           <input id="car_price" />
           <br />
-          <button type="button" onClick={() => setInd(prev => prev - 1)}>
-            Previous
-          </button>
-          <button type="button" onClick={() => setInd(prev => prev + 1)}>
-            Next
-          </button>
+          <button onClick={handlePrev}>Previous</button>
+          <button onClick={handleNext}>Next</button>
         </div>
       )}
 
@@ -45,12 +54,8 @@ function Step({ ind, setInd }) {
           <label>Expiry Date:</label>
           <input type="date" id="expiry_date" />
           <br />
-          <button type="button" onClick={() => setInd(prev => prev - 1)}>
-            Previous
-          </button>
-          <button type="button" onClick={() => setInd(1)}>
-            Submit
-          </button>
+          <button onClick={handlePrev}>Previous</button>
+          <button onClick={handleSubmit}>Submit</button>
         </div>
       )}
     </form>
